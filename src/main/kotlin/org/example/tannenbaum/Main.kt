@@ -6,13 +6,13 @@ fun main() {
     val patterns = mutableListOf<Pattern>()
     patterns.add(LeftShiftPyramidPattern())
     patterns.add(RightShiftPyramidPattern())
+    patterns.add(BoxPattern())
 
     while (true) {
         println("[0] Exit")
         for (pattern in patterns) {
             println("[${pattern.id}] ${pattern.name}")
         }
-        println("[invalid] Reload")
 
         print("Choose a pattern to print: ")
         val id = readLine()?.toIntOrNull() ?: continue
