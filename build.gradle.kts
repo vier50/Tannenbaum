@@ -2,6 +2,7 @@ plugins {
     java
     kotlin("jvm") version "1.4.10"
     application
+    id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
 group = "org.example"
@@ -16,3 +17,9 @@ dependencies {
 }
 
 application.mainClassName = "org.example.tannenbaum.MainKt"
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = application.mainClassName
+    }
+}
