@@ -4,7 +4,7 @@ class BoxPattern : Pattern(3, "Box") {
 
     private var width = 5
     private var height = 3
-    private var char = '*'
+    private var char = '#'
     private var filled = false
 
     override fun init(): Pattern {
